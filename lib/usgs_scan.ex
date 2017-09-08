@@ -1,20 +1,4 @@
 defmodule USGSScan do
-  @moduledoc """
-  Documentation for USGSScan.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> USGSScan.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
 
   def get_url(start_time, end_time, radius, latitude, longitude) do
     base_url = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson"
