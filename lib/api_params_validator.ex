@@ -1,6 +1,7 @@
 defmodule ApiParamsValidator do
   def validate_date(date_str) do
-    true
+    regex = ~r/\d{4}-\d{2}-\d{2}/
+    date_str =~ regex
   end
 
   def validate_latitude(latitude) do
