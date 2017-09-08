@@ -9,7 +9,7 @@ defmodule USGSScanTest do
     latitude = 32.822517
     longitude = -96.776169
 
-    url = USGSScan.get_url(start_time, end_time, radius, latitude, longitude)
+    {:ok, url} = USGSScan.get_url(start_time, end_time, radius, latitude, longitude)
     expected = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2017-01-02&latitude=32.822517&longitude=-96.776169&maxradiuskm=50"
     assert url == expected
   end
@@ -52,8 +52,8 @@ defmodule USGSScanTest do
     latitude = 32.822517
     longitude = -96.776169
 
-    data = USGSScan.fetch_features(start_time, end_time, radius, latitude, longitude)
-    assert data == []
+    {status, _ } = USGSScan.fetch_features(start_time, end_time, radius, latitude, longitude)
+    assert status == :error
   end
 
 end
