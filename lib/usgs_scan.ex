@@ -24,7 +24,7 @@ defmodule USGSScan do
     end
   end
 
-  def fetch_features(start_time, end_time, radius, latitude, longitude) do
+  def fetch_earthquakes(start_time, end_time, radius, latitude, longitude) do
     case fetch(start_time, end_time, radius, latitude, longitude) do
       {:ok, data} ->
         {:ok, map_features(data["features"])}

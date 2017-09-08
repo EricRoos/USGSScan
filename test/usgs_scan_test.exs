@@ -31,7 +31,7 @@ defmodule USGSScanTest do
     radius = 50
     latitude = 32.822517
     longitude = -96.776169
-    USGSScan.fetch_features(start_time, end_time, radius, latitude, longitude)
+    USGSScan.fetch_earthquakes(start_time, end_time, radius, latitude, longitude)
   end
 
   test "fetches data unsuccessfully" do
@@ -52,7 +52,7 @@ defmodule USGSScanTest do
     latitude = 32.822517
     longitude = -96.776169
 
-    {status, _ } = USGSScan.fetch_features(start_time, end_time, radius, latitude, longitude)
+    {status, _ } = USGSScan.fetch_earthquakes(start_time, end_time, radius, latitude, longitude)
     assert status == :error
   end
 

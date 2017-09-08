@@ -32,7 +32,7 @@ iex(4)>latitude = 32.822517
 32.822517
 iex(5)>longitude = -96.776169
 -96.776169
-iex(6)> USGSScan.fetch_features(start_time, end_time, radius, latitude, longitude)
+iex(6)> USGSScan.fetch_earthquakes(start_time, end_time, radius, latitude, longitude)
 [%{time: "2016-09-22 12:37:00Z", title: "M 2.4 - 5km NE of Irving, Texas"},
  %{time: "2016-01-31 06:06:21Z", title: "M 2.1 - 2km W of Irving, Texas"},
  %{time: "2015-12-17 04:24:08Z", title: "M 2.1 - 4km NNW of Irving, Texas"},
