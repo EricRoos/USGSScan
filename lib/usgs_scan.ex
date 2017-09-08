@@ -38,9 +38,12 @@ defmodule USGSScan do
   defp map_features(features) do
     Enum.map features, fn feature ->
       properties = feature["properties"]
+      coordinates = feature["geometry"]["coordinates"]
       title = properties["title"]
+      latitude = Enum.at(coordinates, 0)
+      longitude = Enum.at(coordinates, 1)
       time = DateTime.to_string(DateTime.from_unix!(div(properties["time"], 1000)))
-      %{title: title, time: time}
+      %{title: title, time: time, latitude: latitude, longitude: longitude}
     end
   end
 
