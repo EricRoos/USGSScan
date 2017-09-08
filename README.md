@@ -38,5 +38,5 @@ iex(6)> USGSScan.fetch_features(start_time, end_time, radius, latitude, longitud
  %{time: "2015-12-17 04:24:08Z", title: "M 2.1 - 4km NNW of Irving, Texas"},
  %{time: "2015-12-07 00:27:24Z", title: "M 2.8 - 2km E of Irving, Texas"},
  %{time: "2015-12-06 00:44:08Z", title: "M 2.1 - 6km SSW of Farmers Branch, Texas"},
- %{time: "2015-12-04 14:22:58Z", title: "M 2.1 - 6km NNE of Irving, Texas"}
+ %{time: "2015-12-04 14:22:58Z", title: "M 2.1 - 6km NNE of Irving, Texas"}]
 ```
