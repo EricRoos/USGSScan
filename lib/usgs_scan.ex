@@ -1,5 +1,10 @@
 defmodule USGSScan do
 
+  #
+  # TODO: Change the param passing to a pattern matched object
+  # so we can reuse some stuff and make testing a bit easier
+  # this will also be more extensibile for future use
+  #
   def get_url(start_time, end_time, radius, latitude, longitude) do
     is_valid = validate_params(start_time, end_time, radius, latitude, longitude)
     if is_valid do
@@ -14,6 +19,11 @@ defmodule USGSScan do
     end
   end
 
+  #
+  # TODO: Change the param passing to a pattern matched object
+  # so we can reuse some stuff and make testing a bit easier
+  # this will also be more extensibile for future use
+  #
   def fetch(start_time, end_time, radius, latitude, longitude) do
     case get_url(start_time, end_time, radius, latitude, longitude) do
       {:ok, url} ->
@@ -24,6 +34,11 @@ defmodule USGSScan do
     end
   end
 
+  #
+  # TODO: Change the param passing to a pattern matched object
+  # so we can reuse some stuff and make testing a bit easier
+  # this will also be more extensibile for future use
+  #
   def fetch_earthquakes(start_time, end_time, radius, latitude, longitude) do
     case fetch(start_time, end_time, radius, latitude, longitude) do
       {:ok, data} ->
